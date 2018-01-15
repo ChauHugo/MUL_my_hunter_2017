@@ -1,0 +1,4 @@
+language: c
+group: stable
+os: linux
+script: make re
