@@ -1,4 +1,4 @@
-# Duch Hunt - The duck hunt legacy
+# Duch Hunt - The duck hunt legacy [![Build Status](https://travis-ci.org/mrlizzard/MUL_my_hunter_2017.svg?branch=master)](https://travis-ci.org/mrlizzard/MUL_my_hunter_2017)
 
 - **Binary name:** my_hunter
 - **Repository name:** my_hunter_2017
