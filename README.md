@@ -1,4 +1,4 @@
-# Duch Hunt - the duck hunt legacy
+# Duch Hunt - The duck hunt legacy
 
 - **Binary name:** my_hunter
 - **Repository name:** my_hunter_2017
@@ -51,6 +51,8 @@ Your project should of course fit the requirements below but we are expecting it
 ### Would
 
 - The program **would** be a real mini-game.
+
+<div align="center"><img src="https://tinkerus.files.wordpress.com/2012/09/duckhunt-dogt.png?w=349&h=451" alt="" /></div> 
 
 ## Authorized functions
 
