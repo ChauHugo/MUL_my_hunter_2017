@@ -5,7 +5,9 @@
 ** Copy string into another
 */
 
-char *my_strcpy(char *dest, const char *src)
+# include "my.h"
+
+char *my_strcpy(char *dest, char *src)
 {
 	char *ptr = dest;
 	while (*src != 0)

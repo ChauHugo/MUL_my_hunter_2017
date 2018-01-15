@@ -5,6 +5,8 @@
 ** Swap two numbers
 */
 
+# include "my.h"
+
 void my_swap(int *p1, int *p2)
 {
 	int tmp = *p1;

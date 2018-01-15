@@ -5,6 +5,8 @@
 ** Return 1 if the string given as parameter is composed to only alphanumeric charcaters, and 0 if not
 */
 
+# include "my.h"
+
 int my_str_isalpha(char *str)
 {
 	int i = 0;

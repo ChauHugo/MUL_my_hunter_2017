@@ -5,7 +5,9 @@
 ** Concatenate two strings
 */
 
-char *my_strcat(char *dest, const char *src)
+# include "my.h"
+
+char *my_strcat(char *dest, char *src)
 {
 	int i = 0;
 	int strlen = my_strlen(src);

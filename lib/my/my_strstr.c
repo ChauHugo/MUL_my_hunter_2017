@@ -5,13 +5,16 @@
 ** Behavior of the strstr function
 */
 
+# include "my.h"
+
 char *my_strstr(char *str, char *to_find)
 {
 	int i;
 	int j = 0;
-	int found = 0;
+
 	if (to_find[0] == '\0')
 		return (str);
+
 	while (str[j] != '\0') {
 		i = 0;
 		while (to_find[i] == str[i + j]) {
@@ -23,5 +26,6 @@ char *my_strstr(char *str, char *to_find)
 		}
 		j++;
 	}
+
 	return (0);
 }

@@ -5,6 +5,8 @@
 ** Transform all characters of a string into capital letters
 */
 
+# include "my.h"
+
 char *my_strlowcase(char *str)
 {
 	int i = 0;

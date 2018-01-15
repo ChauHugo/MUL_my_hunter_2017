@@ -1,21 +1,93 @@
-.PHONY: help clean
-.DEFAULT_GOAL = libmy.a
+##
+## EPITECH PROJECT, 2017
+## libmy
+## File description:
+## Makefile libmy
+##
 
-help: ## Display help
-	@grep -E '(^[a-zA-Z_-]+:.*?##.*$$)|(^##)' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[32m%-30s\033[0m %s\n", $$1, $$2}' | sed -e 's/\[32m##/[33m/'
+.PHONY				: all, clean, fclean, re
 
-libmy.a: ## Compile the library
-	gcc -c *.c -I./include/ -w
-	ar rc libmy.a *.o
-	cp libmy.a ../
-	cp ./include/my.h ../../include/
+NAME 				= libmy.a
 
-clean: ## Clean the directory
-	rm -rf *.o
+SRC 				= my_atoi.c 					\
+					  my_compute_power_rec.c 		\
+					  my_putnbr_base.c 				\
+					  my_compute_square_root.c 		\
+					  my_is_prime.c 				\
+					  my_find_prime_sup.c 			\
+					  my_getnbr.c 					\
+					  my_isneg.c 					\
+					  my_malloc.c 					\
+					  my_put_nbr.c 					\
+					  my_putchar.c 					\
+					  my_puterr.c 					\
+					  my_putstr.c 					\
+					  my_revstr.c 					\
+					  my_show_word_array.c 			\
+					  my_showmem.c 					\
+					  my_showstr.c 					\
+					  my_sort_int_array.c 			\
+					  my_str_isalpha.c 				\
+					  my_str_islower.c 				\
+					  my_str_isnum.c 				\
+					  my_str_isprintable.c 			\
+					  my_str_isupper.c 				\
+					  my_str_to_word_array.c 		\
+					  my_strcapitalize.c 			\
+					  my_strcat.c 					\
+					  my_strcmp.c 					\
+					  my_strcpy.c 					\
+					  my_strncmp.c					\
+					  my_strdup.c 					\
+					  my_strlen.c 					\
+					  my_strlowcase.c 				\
+					  my_strncat.c 					\
+					  my_strncpy.c 					\
+					  my_strstr.c 					\
+					  my_strtok.c 					\
+					  my_strupcase.c 				\
+					  my_swap.c 					\
+					  my_trim.c 					\
+					  my_realloc.c 					\
+					  my_getline.c 					\
+					  my_printf_flags_hexadecimal.c \
+					  my_printf_flags_number.c 		\
+					  my_printf_flags_string.c 		\
+					  my_printf_flags_unsigned.c	\
+					  my_printf_utils.c 			\
+					  my_printf.c
 
-fclean: clean ## Clean the compiled content
-	rm -f libmy.a
-	rm -f ../libmy.a
-	rm -f ../../include/my.h
+CFLAGS 				= -Wall -Wextra -Werror -I./include
 
-re: fclean libmy.a
+CC					= gcc
+
+AR 					= ar rc
+
+CP 					= cp
+
+RM 					= rm -f
+
+INCLUDE 			= ./include
+
+REMOTE_INCLUDE 		= ../../include/
+
+INCLUDE_FILE		= my.h
+
+OBJ 				= $(SRC:.c=.o)
+
+all:				$(NAME)
+					$(CP) $(NAME) ../$(NAME)
+					$(CP) $(INCLUDE)/$(INCLUDE_FILE) $(REMOTE_INCLUDE)
+
+$(NAME):			$(OBJ)
+					$(AR) $(NAME) $(OBJ)
+
+clean:
+					$(RM) $(OBJ)
+
+fclean: 			clean
+					$(RM) ../$(NAME)
+					$(RM) $(NAME)
+					$(RM) $(REMOTE_INCLUDE)$(INCLUDE_FILE)
+
+re: 				fclean all

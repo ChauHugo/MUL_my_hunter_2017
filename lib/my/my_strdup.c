@@ -5,6 +5,8 @@
 ** Duplicate once
 */
 
+# include "my.h"
+
 char *my_strdup(char *str)
 {
 	int size = my_strlen(str) + 1;

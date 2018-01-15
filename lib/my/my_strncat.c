@@ -5,7 +5,9 @@
 ** task03D07
 */
 
-char *my_strncat(char *dest, char const *src, int nb)
+# include "my.h"
+
+char *my_strncat(char *dest, char *src, int nb)
 {
 	char *ptr = dest + my_strlen(dest);
 	int j = 0;

@@ -5,6 +5,8 @@
 ** Display memory dumpl
 */
 
+# include "my.h"
+
 static int digit_count(int nbr, int base)
 {
 	int result = 0;
@@ -15,28 +17,6 @@ static int digit_count(int nbr, int base)
 		result++;
 	}
 	return (result);
-}
-
-static int my_putnbr_base(int nbr, char *base)
-{
-	int size = 0;
-	int mod;
-	while (base[size] != '\0')
-		size += 1;
-	if (size <= 1)
-		return (nbr);
-	mod %= size;
-	if (mod < 0)
-		mod = -mod;
-	if (nbr / size == 0) {
-		if (nbr < 0)
-			my_putchar('-');
-		my_putchar(base[mod]);
-		return (nbr);
-	}
-	my_putnbr_base(nbr / size, base);
-	my_putchar(base[mod]);
-	return (nbr);
 }
 
 static void print_hex(int nbr, int char_count)

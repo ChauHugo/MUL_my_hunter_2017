@@ -5,7 +5,9 @@
 ** Check if the strng given as parameter is uppercase
 */
 
-int my_str_isupper(const char *str)
+# include "my.h"
+
+int my_str_isupper(char *str)
 {
 	int i = 0;
 	while (str[i] != '\0') {

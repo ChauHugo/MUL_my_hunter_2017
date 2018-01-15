@@ -5,7 +5,9 @@
 ** Check if the string given as parameter contains only printable charcaters
 */
 
-int my_str_isprintable(const char *str)
+# include "my.h"
+
+int my_str_isprintable(char *str)
 {
 	int i = 0;
 	while (str[i] != '\0') {

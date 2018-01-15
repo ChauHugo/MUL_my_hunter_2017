@@ -5,7 +5,10 @@
 ** Function that return the square root of the number given as argument. If the square root is not a whole number, the function should return 0
 */
 
-int my_compute_square_root(int nb) {
+# include "my.h"
+
+int my_compute_square_root(int nb)
+{
 	int loop = 0;
 	for (; (loop * loop) != nb; loop++) {
 		if ((loop * loop) > nb)

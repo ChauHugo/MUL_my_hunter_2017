@@ -5,6 +5,8 @@
 ** Display number into the console
 */
 
+# include "my.h"
+
 int my_abs(int n)
 {
 	if (n < 0)

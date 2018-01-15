@@ -5,6 +5,8 @@
 ** Behavior of strcmp function
 */
 
+# include "my.h"
+
 int my_strcmp(char *s1, char *s2)
 {
 	while (*s1 && *s2) {

@@ -5,7 +5,8 @@
 ** Print character given as parameter
 */
 
-#include <unistd.h>
+# include <unistd.h>
+# include "my.h"
 
 void my_putchar(char c)
 {

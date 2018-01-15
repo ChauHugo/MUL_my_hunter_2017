@@ -5,6 +5,8 @@
 ** Show str
 */
 
+# include "my.h"
+
 void my_showstr(char *str)
 {
 	int i = 0;

@@ -5,6 +5,8 @@
 ** Put each words of a string into an array
 */
 
+# include "my.h"
+
 static int check_characters_alpha(char c)
 {
 	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) ||
@@ -14,11 +16,11 @@ static int check_characters_alpha(char c)
 	return (0);
 }
 
-static int check_characters_word(char c)
+static int check_characters_word(signed char c)
 {
 	my_put_nbr(c);
 	if ((c <= '/' && c >= 32) || (c <= '@' && c >= ':') ||
-	    (c <= '`' && c >= '[') || (c <= 127 && c >= '}')) {
+	    (c <= '`' && c >= '[') || (c <= 126 && c >= '}')) {
 		return (1);
 	}
 	my_putstr("b\n");

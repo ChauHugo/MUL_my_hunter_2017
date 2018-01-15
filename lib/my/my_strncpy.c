@@ -5,7 +5,9 @@
 ** Copie the n characters of a string given as parameter into another
 */
 
-char *my_strncpy(char *dest, const char *src, int n)
+# include "my.h"
+
+char *my_strncpy(char *dest, char *src, int n)
 {
 	int i = 0;
 	while (i < n && src[i] != '\0') {

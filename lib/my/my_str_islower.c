@@ -5,7 +5,9 @@
 ** Check if string given as parameter is in lowercase
 */
 
-int my_str_islower(const char *str)
+# include "my.h"
+
+int my_str_islower(char *str)
 {
 	int i = 0;
 	while (str[i] != '\0') {

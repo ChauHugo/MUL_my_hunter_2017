@@ -5,9 +5,10 @@
 ** Display string into console
 */
 
-#include <unistd.h>
+# include <unistd.h>
+# include "my.h"
 
-void my_putstr(const char *str)
+void my_putstr(char *str)
 {
 	int len;
 

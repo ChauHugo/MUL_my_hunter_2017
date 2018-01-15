@@ -5,7 +5,9 @@
 ** Behavior of strncmp function
 */
 
-int my_strncmp(const char *s1, const char *s2, int n)
+# include "my.h"
+
+int my_strncmp(char *s1, char *s2, int n)
 {
 	int i = 0;
 	int result = 0;

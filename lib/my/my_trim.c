@@ -5,6 +5,8 @@
 ** Trim spaces
 */
 
+# include "my.h"
+
 char *my_trim(char *str)
 {
 	int offset2 = 0;

@@ -5,6 +5,8 @@
 ** Check if numer given as parameter is prime
 */
 
+# include "my.h"
+
 int my_is_prime(int nbr)
 {
 	int i = 2;

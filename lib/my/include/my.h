@@ -5,8 +5,14 @@
 ** My personnal library header
 */
 
-#ifndef MY_H_
-#define MY_H_
+# ifndef MY_H_
+# define MY_H_
+
+# ifndef READ_SIZE
+# define READ_SIZE (128)
+# endif
+
+# include <stdbool.h>
 
 /**
 ** Check if number is negative or  positive
@@ -25,9 +31,9 @@ int my_atoi(char *str);
 /**
 ** Print number into console
 ** @param (int) nb
-** @return (int) - Return 0
+** @return (void) - Return 0
 **/
-int my_put_nbr(int nb);
+void my_put_nbr(int nb);
 
 /**
 ** Swap two numbers with pointers
@@ -35,28 +41,28 @@ int my_put_nbr(int nb);
 ** @param (int) *b
 ** @return (int) - Return 0
 **/
-int my_swap(int *a, int *b);
+void my_swap(int *a, int *b);
 
 /**
 ** Print string into console
 ** @param (char const) *str
-** @return (int) - Return 0
+** @return (void) - Return 0
 **/
-int my_putstr(char const *str);
+void my_putstr(char *str);
 
 /**
 ** Get the length of a string
 ** @param (char const) *str
 ** @return (int) - Return the length of a string
 **/
-int my_strlen(char const *str);
+int my_strlen(char *str);
 
 /**
 ** Get first number (negative or positive) into a string
 ** @param (char const) *str
 ** @return (int) - Return the number finded into the screen or 0
 **/
-int my_getnbr(char const *str);
+int my_getnbr(char *str);
 
 /**
 ** Calculate the power of a numbre
@@ -94,7 +100,7 @@ int my_find_prime_sup(int nb);
 ** @param (char const) *s2
 ** @return (int) - Return 1 if the two strings equals, and 0 otherwise
 **/
-int my_strcmp(char const *s1, char const *s2);
+int my_strcmp(char *s1, char *s2);
 
 /**
 ** Compare n characters of two strings
@@ -103,7 +109,7 @@ int my_strcmp(char const *s1, char const *s2);
 ** @return (int) - Return 1 if the n characters of the two strings equals,
 ** and 0 otherwise
 **/
-int my_strncmp(char const *s1, char const *s2, int n);
+int my_strncmp(char *s1, char *s2, int n);
 
 /**
 ** Check if string is composed to ONLY alphanumerics characters
@@ -111,7 +117,7 @@ int my_strncmp(char const *s1, char const *s2, int n);
 ** @return (int) - Return 1 if the string contains only
 ** alphanumeric characters, and 0 otherwise
 **/
-int my_str_isalpha(char const *str);
+int my_str_isalpha(char *str);
 
 /**
 ** Check if string contains ONLY numeric characters
@@ -119,7 +125,7 @@ int my_str_isalpha(char const *str);
 ** @return (int) - Return 1 if the string contains only
 ** numeric characters, and 0 otherwise
 **/
-int my_str_isnum(char const *str);
+int my_str_isnum(char *str);
 
 /**
 ** Check if the string contains only lowercase characters
@@ -127,7 +133,7 @@ int my_str_isnum(char const *str);
 ** @return (int) - Return 1 if the string contains only
 ** lowercase characters, and 0 otherwise
 **/
-int my_str_islower(char const *str);
+int my_str_islower(char *str);
 
 /**
 ** Check if the string contains only uppercase characters
@@ -135,14 +141,14 @@ int my_str_islower(char const *str);
 ** @return (int) - Return 1 if the string contains only
 ** uppercase characters, and 0 otherwise
 **/
-int my_str_isupper(char const *str);
+int my_str_isupper(char *str);
 
 /**
 ** Check if the string can be printable in the console
 ** @param (char const) *str
 ** @return (int) - Return 1 if the string is printable and 0 otherwise
 **/
-int my_str_isprintable(char const *str);
+int my_str_isprintable(char *str);
 
 /**
 ** Print string (hexa/char)
@@ -150,7 +156,7 @@ int my_str_isprintable(char const *str);
 ** @return (int) - Return 0. If the string contains non-printable
 ** characters,must be printed hexadecimally (in lowercase letters)
 **/
-int my_showstr(char const *str);
+void my_showstr(char *str);
 
 /**
 ** Print memory dump
@@ -158,7 +164,7 @@ int my_showstr(char const *str);
 ** @param (int) size
 ** @return (int) - Return 0
 **/
-int my_showmem(char const *str, int size);
+void my_showmem(char *str, int size);
 
 /**
 ** Copy string into another
@@ -166,7 +172,7 @@ int my_showmem(char const *str, int size);
 ** @param (char const) *src
 ** @return (char) - The copied string
 **/
-char *my_strcpy(char *dest, char const *src);
+char *my_strcpy(char *dest, char *src);
 
 /**
 ** Copy n characters of string into another
@@ -175,7 +181,7 @@ char *my_strcpy(char *dest, char const *src);
 ** @param (int) n
 ** @return (char) - Return the n characters copied string into another
 **/
-char *my_strncpy(char *dest, char const *src, int n);
+char *my_strncpy(char *dest, char *src, int n);
 
 /**
 ** Reverse string
@@ -194,7 +200,7 @@ char *my_revstr(char *str);
 ** of ony of the entire sequence of characters specified id to_find,
 ** or a null pointer if teh sequence is not present in str.
 **/
-char *my_strstr(char const *str, char const *to_find);
+char *my_strstr(char *str, char *to_find);
 
 /**
 ** Transform all lowercases letters into capital letters
@@ -224,7 +230,7 @@ char *my_strcapitalize(char *str);
 ** @param (char const) *src
 ** @return (char) - Return the concatenated string
 **/
-char *my_strcat(char *dest, char const *src);
+char *my_strcat(char *dest, char *src);
 
 /**
 ** Concatenate n charactes of string into one string
@@ -233,7 +239,7 @@ char *my_strcat(char *dest, char const *src);
 ** @param (int) n
 ** @return (char) - Return the concatenated string only the n characters)
 **/
-char *my_strncat(char *dest, char const *src, int n);
+char *my_strncat(char *dest, char *src, int n);
 
 /**
 ** Remove spaces present in a string
@@ -241,7 +247,7 @@ char *my_strncat(char *dest, char const *src, int n);
 ** @param (char *) str
 ** @return (char) - Returns string without spaces
 **/
-char *trim_spaces(char *str);
+char *my_trim(char *str);
 
 /**
 ** Print only one character into console
@@ -261,9 +267,10 @@ void my_sort_int_array(int *array, int size);
 /**
 ** Print error (on the stderr output)
 ** @param (char) *str
+** @param (bool) close
 ** @return (void)
 **/
-void my_puterr(char *str);
+void my_puterr(char *str, bool close);
 
 /**
 ** Malloc own (exit wen malloc failed)
@@ -294,4 +301,35 @@ char **my_str_to_word_array(char *str);
 **/
 char **my_strtok(char *str, char *delimiter);
 
-#endif
+/**
+** Print number in defined base
+** @param (int) nbr
+** @param (char *) base
+** @return (void)
+**/
+void my_putnbr_base(int nbr, char *base);
+
+/**
+** Realloc char pointer
+** @param (char *) ptr
+** @param (unsigned int) size
+** @return (char *) new_ptr
+**/
+char *my_realloc(char *ptr, unsigned int size);
+
+/**
+** Get the next line of file description
+** @param (int) fdesc
+** @return (char *) line
+**/
+char *my_getline(int fdesc);
+
+/**
+** Printf function recoded
+** @param (char *) format
+** @param (...) va_list <stdarg.h>
+** @return (void)
+**/
+void my_printf(char *format, ...);
+
+# endif

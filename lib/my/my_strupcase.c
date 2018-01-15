@@ -5,6 +5,8 @@
 ** Transform all letters into capital letters
 */
 
+# include "my.h"
+
 char *my_strupcase(char *str)
 {
 	int i = 0;

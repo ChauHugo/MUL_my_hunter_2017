@@ -5,6 +5,8 @@
 ** Convert string into number (int)
 */
 
+# include "my.h"
+
 int my_atoi(char *str)
 {
 	unsigned int i = 0;
