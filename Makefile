@@ -13,7 +13,7 @@ INC_DIR					= ./include
 
 FLAGS					= -Wall -Wextra
 
-LIB_FLAG				= -lc_graph_prog -L$(LIB_DIR) -lmy
+LIB_FLAG				= -l c_graph_prog -L$(LIB_DIR) -lmy
 
 SRC						= src/main.c 					\
 						  src/assets_utils.c 			\
