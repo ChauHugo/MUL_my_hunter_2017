@@ -1,6 +1,12 @@
 language: c
+
 group: stable
+
 os: linux
-script: make re
+
+script:
+  - ./lib/build_csfml.sh
+  - make re
+
 notifications:
   email: false
